@@ -2,10 +2,7 @@ import streamlit as st
 import tempfile
 import os
 
-# Configura todos os caminhos de cache para a pasta /tmp (única com permissão de escrita)
 os.environ["RAPIDOCR_MODEL_PATH"] = "/tmp/rapidocr_models"
-os.environ['HF_HOME'] = '/tmp/huggingface'
-os.environ['TORCH_HOME'] = '/tmp/torch'
 os.environ["MPLCONFIGDIR"] = "/tmp/matplotlib"
 
 from pathlib import Path
