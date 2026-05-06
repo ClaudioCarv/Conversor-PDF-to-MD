@@ -25,9 +25,10 @@ class PDFToMarkdownConverter:
     """Conversor de PDF para Markdown usando Docling"""
     
     def __init__(self, output_dir: str = "output", log_dir: str = "logs"):
-        """
-        Inicializa o conversor
-        """
+        
+        self.ocr_model_path = Path("/tmp/rapidocr_models")
+        self.ocr_model_path.mkdir(parents=True, exist_ok=True)
+
         self.output_dir = Path(output_dir)
         self.log_dir = Path(log_dir)
         

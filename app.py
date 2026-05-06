@@ -1,10 +1,11 @@
-import streamlit as st
-import tempfile
 import os
 
 os.environ["RAPIDOCR_MODEL_PATH"] = "/tmp/rapidocr_models"
 os.environ["MPLCONFIGDIR"] = "/tmp/matplotlib"
 
+
+import streamlit as st
+import tempfile
 from pathlib import Path
 import zipfile
 import io
