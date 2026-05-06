@@ -1,6 +1,10 @@
 import streamlit as st
 import tempfile
 import os
+
+os.environ["RAPIDOCR_MODEL_PATH"] = "/tmp/rapidocr_models"
+os.environ["MPLCONFIGDIR"] = "/tmp/matplotlib"
+
 from pathlib import Path
 import zipfile
 import io
@@ -11,13 +15,6 @@ import json
 from converter import PDFToMarkdownConverter
 from validator import MarkdownValidator
 
-
-# Define uma pasta temporária onde o Streamlit permite gravar arquivos
-os.environ["RAPIDOCR_MODEL_PATH"] = "/tmp/rapidocr_models"
-
-# Garante que a pasta exista
-if not os.path.exists("/tmp/rapidocr_models"):
-    os.makedirs("/tmp/rapidocr_models")
 
 st.set_page_config(
     page_title="PDF para Markdown - SIAGOV",
