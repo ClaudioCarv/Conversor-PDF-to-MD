@@ -1,0 +1,23 @@
+# Dependências do Projeto PDF to Markdown Converter
+
+# Conversão PDF para Markdown
+docling>=1.0.0
+docling-core>=1.0.0
+
+# Processamento de PDF adicional
+PyPDF2>=3.0.0
+pdfplumber>=0.10.0
+
+# Validação ortográfica em português
+language-tool-python>=2.7.1
+pyspellchecker>=0.7.2
+
+# Comparação de texto e similaridade
+difflib  # built-in
+python-Levenshtein>=0.21.0
+fuzzywuzzy>=0.18.0
+
+# Utilitários
+tqdm>=4.65.0
+rich>=13.0.0
+python-dotenv>=1.0.0
